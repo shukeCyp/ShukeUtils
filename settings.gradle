@@ -3,6 +3,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven{ url 'https://jitpack.io'}
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
@@ -10,3 +11,5 @@ rootProject.name = "ShukeUtils"
 include ':app'
 include ':MVPCore'
 include ':Common'
+include ':Net'
+include ':MVVMCore'

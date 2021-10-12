@@ -1,6 +1,5 @@
-package com.shuke.shukeutils
+package com.shuke.net
 
-import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -18,10 +17,8 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
-        for (i in 0..100){
-            if (i in 19 .. 21){
-                Log.i("TAG", i.toString())
-            }
-        }
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertEquals("com.shuke.net.test", appContext.packageName)
     }
 }
